@@ -1,0 +1,28 @@
+{{>Header}}
+<div class="preloader">
+        <div class="loader"></div>
+    </div>
+{{>Navbar}}
+
+<img src="/public/images/1692086342552-bram-naus-n8Qb1ZAkK88-unsplash (1).jpg" alt="/public/images/1692086342552-bram-naus-n8Qb1ZAkK88-unsplash (1).jpg" class="img-fluid img-set">
+
+
+<h1 class="blogshead center">Topics</h1>
+
+<div class="cards posts">
+    {{#each blogs}}
+    <div class="card" style="width: 28rem;">
+  <img src="/{{this.blog_logo}}" class="card-img-top img-fluid" alt="{{this.blog_logo}}" style="height: 50vh;">
+  <div class="card-body">
+    <h5 class="card-title">{{this.blog_title}}</h5>
+    <p class="card-text">{{this.descripton}}</p>
+    <a href="/deatail/{{this._id}}" class="btn btn-primary mb-4">Read More</a>
+  </div>
+</div>
+{{/each}}
+ 
+</div>
+
+
+
+{{>Footer6}}

@@ -1,0 +1,29 @@
+{{>Header}}
+<div class="preloader">
+        <div class="loader"></div>
+    </div>
+{{>Navbar}}
+
+
+<span id="sm">Searching for <b>{{searchQuery}}</b></span>
+
+<div class="cards top">
+    {{#each searchresult}}
+    <div class="card" style="width: 28rem;">
+  <img src="/{{this.blog_logo}}" class="card-img-top" alt="{{this.blog_logo}}">
+  <div class="card-body">
+    <h5 class="card-title">{{this.blog_title}}</h5>
+    <p class="card-text">{{this.descripton}}</p>
+    <a href="/deatail/{{this._id}}" class="btn btn-primary mb-4">Read More</a>
+  </div>
+</div>
+{{/each}}
+ 
+</div>
+
+
+
+{{>Foot}}
+
+
+{{>Footer6}}

@@ -1,0 +1,43 @@
+{{>Header}}
+
+<div class="slides"></div>
+
+{{>Slider2}}
+
+  <div class="content">
+     {{#if msg}}
+ <div class="alert alert-danger" id="dangerAlert" role="alert">
+  {{msg}}
+</div>
+    {{/if}}
+<div class="cont set-m">
+       <div class="inner">
+
+        <h1>Blog setup</h1>
+        <hr class="cutter">
+        <img  class="img-fluid img_setup" src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBwgHBgkIBwgKCgkLDRYPDQwMDRsUFRAWIB0iIiAdHx8kKDQsJCYxJx8fLT0tMTU3Ojo6Iys/RD84QzQ5OjcBCgoKDQwNGg8PGjclHyU3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3N//AABEIAHkA4gMBIgACEQEDEQH/xAAZAAADAQEBAAAAAAAAAAAAAAABAgMABAb/xAAdEAEBAQEBAAMBAQAAAAAAAAAAAQIREgMTMWEh/8QAFgEBAQEAAAAAAAAAAAAAAAAAAAEC/8QAFhEBAQEAAAAAAAAAAAAAAAAAABEB/9oADAMBAAIRAxEAPwD0LMLTICwyAAmkGQCyDw0gzIE8jIp5GYBPg8Umf8N5FR43FvDeAR43FvDeAR4HF/AeQR4FytcFuREuBxW5DyCXAUsCwCAbgcAGGgDMzAIyGGQC+TcGQ8gFkNMnmTzIJzB5hSZPMCpTBphaYNMAhMG8OifGaYKOafG31ur6x+so5Prb63X4C4KOT6w8Ou/GW/GUclwW4ddwS4By3Bbl1XJLkHNcluXRrKdyIjYWxW5LYCVjcPYAEYeUQMaRjSAMh8xsxTMBsw+cjmKZgoZypnI5iuYBJk8wpnKkyglMHmP4rMHmARmG8OiYHwK5vDXH8dPgLgHLcFuHVcEuBHLcEuHVck1kHLcJ6y6tRLUBzaynrLp1E9RRz6idi+oTUEQsDilhLAKwsBofJIeAeKZhMqZBTMVzEsq5FUzFcxLKuagrmKZieapngHkPIWU8oppB4HR6DcCwet0CWEsUtJqgnqJ6ilT0IlqJaiuqloE9JaV0lpRLRKppOgnpOxTRKIVhYAh5UzSgtmnzUc0+aC+armufNPnQrpzpXOnNnSmdIOnNUzpy50pNA6Zo805po02K6Zofbn9j7B0ev6F2h7C7Ba6JdJ3ZLsFNaT1ot2nrQhtVLVbWk9aBtVPVDWiaqgapLWtJaAUla0togsHQAOjKSGA8p5U4MBfNPNISnlBeaPnSEppRXRNHm3PKaUHTNmm3PNDNIOj2PtD03oF/be0eh0Frsl2n6LdApdEuiei2qG1ol0W0loGuk7prSWiNaS1rS39BrSswAwMA8EIaA0NPwIMA0PCw8A0NCw0A8NCw0FNP0Z+hP00/QGMwmjALGBaFGhQIWnpKBaSnpKIWkp6SgShTUoF4w0ALwWYBYBA0GUogeU0pIaApKaVOHgHmjSpw8FPKaVOCCnW6QQP0LStQG0vQoAPS2sWg10S0aWiBaW0b+FAtCjfwoBQGgDMzA//Z" alt="blogpost" >
+       <form action="" class="form-group" method="post" enctype="multipart/form-data" id="AddPost" >
+            <label for="file" class="uploadfile"><i class="fas fa-upload"></i></label>
+            <input type="file" name="file" id="file" class="file">
+            <div class="detail-blog">
+                 <input type="text" name="title" id="title" class="title form-control" style="margin-left: 3rem;" placeholder="Enter Blog Title">
+                 <div class="errinfo"></div>
+                 <div class="info"></div>
+                 <textarea name="description" id="descriptions" class="form-control" placeholder="Enter blog Discription" rows="9" ></textarea>
+                 <div class="errinfo"></div>
+                  <div class="info"></div>
+            </div>
+
+                 <input type="submit" id="submit" value="Create Blogs">
+        
+
+       <p class="msgssss"></p>
+       </form>
+
+       </div>
+       
+   </div>
+  </div>
+</div>
+
+{{>Footer4}}

@@ -1,0 +1,44 @@
+{{>Header}}
+<div class="preloader">
+        <div class="loader"></div>
+    </div>
+
+{{>Navbar4}}
+
+<div class="container">
+    <h1>Login</h1>
+    {{#if msg}}
+ <div class="alert alert-danger" id="dangerAlert" role="alert">
+  {{msg}}
+</div>
+    {{/if}}
+
+
+{{#if Success}}
+<div class="alert alert-success" id="SuccessAlert" role="alert">
+{{Success}}
+</div>
+{{/if}}
+
+<hr class="cutter">
+
+<form action="/login" method="post" id="form" >
+
+<label for="email">Enter Email Address :</label>
+<input type="text" name="email" id="email" class="form-control" placeholder="Enter Email" >
+<div class="errinfo"></div>
+<label for="email">Enter Password :</label>
+<input type="password" name="password" class="form-control" id="password" placeholder="Enter Password" >
+<div class="errinfo"></div>
+<input type="submit" id="LoginBtn" class="btn btn-primary" value="Login">
+<p class="para">Not Have Account Yet ! <a href="/register">register now</a></p>
+<p class="para">I Forgot My password <a href="/Forget">Forget password now</a></p>
+
+
+</form>
+</div>
+
+{{>Foot}}
+
+
+{{>Footer2}}

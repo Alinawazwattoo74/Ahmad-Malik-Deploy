@@ -1,0 +1,697 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;500&family=Roboto&display=swap');
+
+* {
+     margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+     background-color: #f0eeeef0;
+     text-transform: capitalize;
+}
+
+#imgs {
+       width: 80%;
+}
+
+.uploadfile {
+     position: absolute;
+     right: 17rem;
+     font-size: 2rem;
+     color: red;
+     top: 46rem;
+}
+
+.img_setup {
+       width: 100%;
+       height: auto;
+}
+
+#file {
+     display: none;
+}
+
+.detail-blog {
+     margin-top: 4rem;
+    margin-bottom: 4rem;
+}
+
+.detail-blog input {
+     padding: 1rem;
+     margin-bottom: 2rem;
+     border-radius: 1rem;
+} 
+
+#description {
+     padding:6rem 2rem;
+     border-radius: 1.5rem;
+}
+
+#description::placeholder {
+     margin-top: 1rem;
+}
+
+.user-details input {
+       padding: 1rem;
+       margin-bottom: 3rem;
+       border-radius: 1rem;
+}
+
+#submit {
+     width: 10%;
+     background-color: black;
+     color: white;
+     border: none;
+     padding: 1rem;
+     margin-bottom: 2rem;
+     position: relative;
+     left: 50rem;
+}
+
+#submit:hover {
+       box-shadow: 0rem 0rem 2rem rgba(0, 0, 0, 0.6);
+       transition: all 0.3s ease-in-out;
+       padding: 1rem 1.8rem;
+}
+
+.errinfo {
+    position: relative;
+    left: 1rem;
+    color: red;
+}
+
+.info {
+     color: green;
+     font-size: 1rem;
+}
+
+.container {
+     margin-top: 11rem;
+}
+.container h1  {
+      text-align: center;
+}
+
+.cutter {
+      margin-bottom: 3rem;
+} 
+
+#form  {
+      width: 50vw;
+      height: 50vh;
+      margin: auto;
+}
+
+.set-m {
+       margin-top: 1rem;
+}
+
+#form  label {
+      font-size: 1.2rem;
+      font-weight: bolder;
+      margin-left: 1rem;
+      margin-bottom: 1rem;
+}
+
+#form input {
+       margin-bottom: 2rem;
+       border-radius: 1.6rem;
+       padding: 1rem;
+       
+}
+
+#LoginBtn {
+      position: relative;
+      left: 26rem;
+      font-size: 1.3rem;
+      font-weight: bolder;
+      width: 23%;
+}
+
+#register {
+     position: relative;
+     left: 26rem;
+     font-size: 1.3rem;
+     font-weight: bolder;
+     width: 23%;
+}
+
+#LoginBtn:hover {
+      padding: 1.3rem 1.5rem;
+      transition: all 0.3s ease-in-out;
+}
+
+#register:hover {
+     padding: 1.3rem 1.5rem;
+     transition: all 0.3s ease-in-out;
+}
+
+.msg {
+      color: red;
+      font-size: 1rem;
+      font-weight: bolder;
+}
+
+.para {
+      font-weight: bolder;
+      font-size: 1.3rem;
+      margin-left: 1.2rem;
+}
+
+.slider {
+       width: 16vw;
+       height: 100vh;
+       background-color: black;
+       color: white;
+}
+
+.head_slider {
+      text-align: center;
+      padding-bottom: 1.4rem;
+      padding-top:1.4rem;
+}
+
+.links li {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      margin-top: 2rem;
+}
+
+.links li a {
+      margin-bottom: 2rem;
+      font-size: 1.7rem;
+      font-weight: bolder;
+      text-decoration: none;
+      color: white;
+      padding: 1rem;
+      margin-left: -2rem;
+      width: 110%;
+}
+
+.links li a i {
+       padding: 0rem 2rem 0rem 0rem;
+}
+
+.links li a:hover {
+       background-color: red;
+       color: white;
+       width: 100%;
+}
+
+i.setup  {
+      position: relative;
+      left: 0.2rem;
+}
+
+a.setup {
+     position: relative;
+      left: -1.3rem;
+}
+
+.sidebar {
+     width: 18rem; 
+     background-color: #333;
+     color: white;
+     height: 100vh;
+     padding-top: 1rem;
+     position: fixed;
+     top: 0;
+     left: 0;
+     overflow-y: auto;
+   }
+   
+   .sidebar a {
+     display: block;
+     padding: 1rem;
+     text-decoration: none;
+     color: white;
+     transition: background-color 0.3s;
+     display: flex;
+     align-items: center;
+     text-align: center;
+     padding-left: 2rem;
+
+   }
+   
+   .sidebar a:hover {
+     background-color: #555;
+   }
+   
+   .sidebar a.active {
+     background-color: #444;
+     width: 100vw;
+   }
+   
+
+   .content {
+     margin-left: 18rem;
+     padding: 2rem;
+   }
+
+   .sidebar i {
+      position: relative;
+      right: 1rem;
+   }
+ 
+   .slides {
+      display: flex;
+      align-items: center;
+      text-align: center;
+   }
+   
+   .low_div  {
+       position: fixed;
+       bottom: 3rem;
+       left: 2rem;
+   }
+
+
+  
+   #navs {
+        box-shadow: 0rem 0rem 2rem rgba(0, 0, 0, 0.6);
+   }
+   
+   .text-muted {
+       font-weight: bolder;
+       font-size: 1.4rem;
+       padding: 3rem;
+   }
+   
+   i.fab:hover {
+        transition: all 0.3s ease-in-out;
+        color: green;
+
+   }
+
+   .img-set {
+      width: 100%;
+      height: auto;
+   }
+   .blogshead  {
+       margin-top: 5rem;
+       text-align: center;
+       margin-bottom: 7rem;
+   }
+
+   .cards {
+     display: flex;
+     flex-wrap: wrap;
+     text-align: start;
+     align-items: flex-start;
+     justify-content: space-around;
+ }
+
+ #navbarSupportedContent {
+    margin-left: 18rem;
+ }
+
+ #navbarSupportedContent li a {
+     font-size: 1.3rem;
+     color: black;
+     padding:0rem 4rem;
+ }
+
+ #navbarSupportedContent li a:hover {
+     transition: all 0.3s ease-in-out;
+     color: red;
+ }
+
+ #navbarSupportedContent #active {
+     color:red;
+  }
+  
+
+  .pr-2 {
+      padding: 0rem 5rem;
+  }
+
+
+  .cards {
+      display: flex;
+      flex-wrap: wrap;
+      text-align: start;
+      align-items: flex-start;
+      justify-content: space-between;
+      padding: 6rem;
+  }
+
+   .card {
+       margin-bottom: 4rem;
+       height:49rem;
+       flex-basis: calc(40.33% - 3rem);
+       border-radius: 2rem;
+   }
+
+   .set-up  {
+     max-width: 80%;
+     height: auto;
+     position: relative;
+     left: 9rem;
+     top: 3rem;
+   }
+
+.details {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        text-align: center;
+        margin-top: 7rem;
+}
+.h1 {
+       font-weight: bolder;
+       font-size: 1.6rem;
+       margin-left: 4rem;
+       color: green;
+}
+
+
+
+.detail_des {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 3rem;
+       text-align: center;
+       font-weight: bolder;
+       font-size: 1.4rem;
+     gap: 2rem;
+     word-spacing: 1rem;
+     padding-bottom: 6rem;
+
+}
+
+
+.span {
+       color: red;
+}
+
+.mb-4 {
+      margin-bottom: 2rem;
+}
+
+.Date {
+       font-size: 1rem;
+}
+
+#spans {
+      color: red;
+}
+
+#sm {
+     position: relative;
+     top: 3rem;
+     left: 2rem;
+}
+
+#sm  b {
+     color: red;
+}
+
+.top {
+      position: relative;
+      top: 6rem;
+}
+
+.detailcotact {
+      margin-top: 5rem;
+}
+
+.detailcotact h2  {
+      font-size: 1.5rem;
+      color:black;
+      font-weight: bolder;
+      margin-left: 9rem;
+}
+
+.detailcotact h4 {
+       font-size: 1.2rem;
+       color: green;
+       padding: 0rem 9rem;
+}
+
+.containers {
+       width: 50rem;
+       height: auto;
+       background-color: #fff;
+       margin: auto;
+       margin-top: 4rem;
+       padding: 1.4rem;
+       border-radius: 1rem;
+}
+
+.containers input {
+      margin-bottom: 3rem;
+      padding: 1rem;
+}
+
+.cont_btn  {
+      width: 33%;
+      margin: 1rem  17rem;
+      position: relative;
+      top: 2rem;
+}
+.err-info {
+       color: red;
+       position: relative;
+       top: -3rem;
+}
+
+#id {
+       display: none;
+}
+
+.comments {
+        background-color: #fff;
+        color: black;
+        width: 70%;
+        margin: auto;
+        padding: 1.4rem;
+}
+
+.comments h1 {
+       color: red;
+}
+
+.comments input {
+       margin-bottom: 2rem;
+       padding: 1rem;
+}
+
+.msgs {
+       margin-top: 3rem;
+}
+
+.comments-data {
+        border-bottom: 1px solid black;
+        border-radius: 1.23rem;
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+        padding: 1rem;
+}
+
+.comments-data .upper-data {
+       position: relative;
+       left: 3rem;
+       top: -2rem;
+}
+
+.comments-data .upper-data .name {
+      color: green;
+      font-weight: bolder;
+      font-size: 1.4rem;
+}
+
+.comments-data p {
+       font-size: 2rem;
+       margin-top: 1rem;
+}
+
+.replycomment {
+        padding: 3rem;
+}
+
+.replyform {
+       margin-bottom: 2rem;
+}
+
+.replyform input {
+       width: 50%;
+       margin: auto;
+       margin-bottom: 1rem;
+}
+
+.replyform  textarea.form-control {
+      min-height: calc(1.5em + (0.75rem + 2px));
+      width: 50%;
+      margin: auto;
+  }
+
+  .replyform label {
+        text-align: center;
+        position: relative;
+        left: 14rem;
+        margin-bottom: 1rem;
+        color: green;
+        font-weight: bolder;
+  }
+  .replyform button {
+       width: 10%;
+       position: relative;
+       left: 34rem;
+       margin-top: 2rem;
+  }
+
+  .reply_area {
+        margin-top: 2rem;
+        position: relative;
+        left: 2rem;
+  }
+  .reply_area h3 {
+       text-align: center;
+       margin-bottom: 4rem;
+  }
+
+  .msgssss {
+        margin-top: -7rem;
+        color: green;
+  }
+
+  .head {
+        display: flex;
+        align-items: center;
+  }
+
+  .head span {
+      padding: 0rem 0.3rem;
+      color: green;
+  }
+
+  .left_data {
+        margin-top: 3rem;
+  }
+
+
+  .left_data h5 {
+       font-size: 2rem;
+  }
+
+  .left_data span {
+       font-size: 1.6rem;
+       color: red;
+       font-weight: bolder;
+
+  }
+
+  .blogs_info {
+        margin-top: 4rem;
+  }
+  .header {
+
+        justify-content: space-around;
+        color: white;
+        padding: 2rem 0rem;
+  }
+
+  .imglogo img {
+
+      width: 13%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      position: relative;
+      left: 15rem;
+      padding-bottom: 5rem;
+      margin-top: 2rem;
+
+  }
+
+  .dat_info {
+       display: flex;
+       align-items: center;
+       justify-content: space-around;
+       text-align: center;
+  }
+
+  .title {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        margin-top: 3rem;
+        position: relative;
+        left: -3rem;
+        font-size: 2rem;
+        color: green;
+  }
+
+  .created {
+       color: red;
+       margin-top: 3rem;
+  }
+  .actions {
+        display: flex;
+        align-items: center;
+        text-align: center;
+        position: relative;
+        left: -3rem;
+  }
+  .actions a {
+       padding: 0rem 1rem;
+  }
+
+  #AddPost img {
+         width: 80%;
+         height: 80%;
+         margin: auto;
+         margin-bottom: 3rem;
+         position: relative;
+         left: 7rem;
+  }
+
+  #AddPost input,textarea {
+        font-weight: bolder;
+  }
+  
+
+  #change {
+         padding: 1rem;
+         width: auto;
+         margin: auto;
+         position: relative;
+         left: 20rem;
+  }
+
+  .preloader {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color:#fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 9999;
+  }
+  
+  .loader {
+      border: 0.25rem solid #f3f3f3;
+      border-top: 0.25rem solid #3498db;
+      border-radius: 50%;
+      width: 4rem;
+      height: 4rem;
+      animation: spin 2s linear infinite;
+  }
+  
+  @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+  }

@@ -1,0 +1,112 @@
+{{>Header}}
+<div class="preloader">
+        <div class="loader"></div>
+    </div>
+{{>Navbar}}
+
+<div class="blogsData">
+    <img src="/{{blogData.blog_logo}}" class="img-fluid set-up" alt="/{{blogData.blog_logo}}">
+    <div class="details">
+        <div class="user_details">
+          <i class="fas fa-user fa-2x"></i>
+           <h1 class="createdby"> created by <span class="span">{{userData.Name}}</span></h1>
+        </div>
+        <div class="blog_created">
+            <i class="fas fa-clock fa-2x"></i>
+            <h1>Created At <span class="span Date">{{blogData.CreatedAt}}</span></h1>
+        </div>
+    </div>
+</div>
+<hr class="cutter">
+
+<div class="detailinblogs">
+      <h1 class="h1">
+        {{blogData.blog_title}}
+      </h1>
+      <hr class="cutter">
+      <div class="detail_des">
+          
+       {{blogData.descripton}}
+      
+      </div>
+</div>
+
+<div class="comments">
+  <h1>Enter Your comments</h1>
+     <div class="header">
+        <form action="/comments" method="post" class="Formcontrol">
+         <label for="exampleFormControlTextarea1">Enter name</label>
+             <input type="text" name="comentername" id="comentername" required class="comentername form-control" placeholder="Enter Your Name">
+             <label for="exampleFormControlTextarea1">Enter mail</label>
+             <input type="text" name="comentermail" id="comentermail" required class="comentername form-control" placeholder="Enter Your mail">
+             <label for="exampleFormControlTextarea1">leave your comments</label>
+    <textarea class="form-control p-3" name="msg" id="exampleFormControlTextarea1" required rows="3" placeholder="Enter comment here to join the discussion"></textarea>
+    <input type="hidden" name="postcommentId" id="ided" value="{{blogData._id}}">
+    <br>
+    <button type="submit" class="btn btn-primary p-2">Submit</button>
+  </div>
+        </form>
+          <p class="msgs" style="color: green;"></p>
+
+      
+
+           
+    <div class="comments-data">
+   {{#each blogData.comments}}
+   <div class="commentstext">
+      <i class="fas fa-user"></i>
+      <div class="upper-data">
+         <div class="name">{{this.name}}</div>
+         <p>{{this.comment}}</p>
+      </div>
+      
+   </div>
+   <div class="reply_area">
+
+      <h3>replies on <span style="color: red;">{{this.name}}</span> comments </h3>
+
+      {{#each this.replies}}
+
+       <div class="commentstext">
+      <i class="fas fa-user"></i>
+      <div class="upper-data">
+         <div class="name">{{this.replyname}}</div>
+         <p>{{this.replymsg}}</p>
+      </div>
+        
+   </div>
+   {{/each}}
+   <div class="replyform">
+      
+       <form  class="reply" id="reply" >
+        
+          <input type="hidden" id="blogs" class="blogscommentreplyId" name="replypostcommentId" value="">
+        <input type="hidden" name="replycommentId" class="blogscommentsided" value="{{this._id}}">
+        <input type="hidden" name="coomentEmail" class="coomentEmail" value="{{this.mail}}">
+
+          <label for="exampleFormControlTextarea1">Enter name</label>
+             <input type="text" name="comenternamereply" id="comenternamereply"  required class="comentername form-control comenternamereply" placeholder="Enter Your Name">
+             <label for="exampleFormControlTextarea1">leave your reply for {{this.name}} comment</label>
+    <textarea class="form-control p-3 replymsg" name="replymsg" id="exampleFormControlTextarea1" required rows="3" placeholder="Enter comment here to join the discussion"></textarea>
+    <button type="submit" class="btn btn-dark"  >Submit</button>
+    <br>
+    <br>
+    <br>
+    <p class="msgs replytext" style="color: green;"></p>
+       </form>
+          
+
+
+   </div>
+  
+   {{/each}}
+   
+</div>
+
+        
+     </div>
+</div>
+
+
+
+{{>Footer}}

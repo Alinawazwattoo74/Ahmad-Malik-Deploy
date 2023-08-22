@@ -1,0 +1,43 @@
+{{>Header}}
+<div class="preloader">
+        <div class="loader"></div>
+    </div>
+
+
+{{>Navbar3}}
+
+
+
+<div class="container">
+    <h1>Registeration Form</h1>
+    {{#if msg}}
+    <p class="msg">{{msg}}</p>
+    {{/if}}
+<hr class="cutter">
+
+<form action="/register" method="post" id="form" >
+
+<label for="name">Enter Name :</label>
+<input type="text" name="name" id="name" class="form-control" placeholder="Enter Name" >
+<div class="errinfo"></div>
+
+<label for="email">Enter Email Address :</label>
+<input type="text" name="email" id="email" class="form-control" placeholder="Enter Email" >
+<div class="errinfo"></div>
+<label for="email">Enter Password :</label>
+<input type="password" name="password" class="form-control" id="password" placeholder="Enter Password" >
+<div class="errinfo"></div>
+<input type="submit" id="register" class="btn btn-primary" value="Register">
+
+
+<p class="para">Already Have An Account <a href="/login">Login now</a></p>
+</form>
+
+
+</div>
+
+
+{{>Foot}}
+
+
+{{>Footer3}}

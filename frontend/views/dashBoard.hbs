@@ -1,0 +1,110 @@
+{{>Header}}
+
+<div class="slides"></div>
+
+{{>Slider}}
+
+  <div class="content">
+
+   {{#if Success}}
+<div class="alert alert-success" id="SuccessAlert" role="alert">
+{{Success}}
+</div>
+{{/if}}
+
+<div class="overview">
+
+      <h4 class="head">
+         Hello! {{data.Name}} Today <span class="date"> </span>,<span class="month"> </span>, <span class="year"></span>  overview
+      </h4>
+      <hr>
+      <div class="divs">
+          <div class="one_div">
+
+            <i class="fa-solid fa-folder-open fa-3x">
+
+            </i>
+              <div class="left_data">
+                   <h5>Your Blogs</h5>
+                   <span>{{yourblogscount}}</span>
+              </div>
+          </div>
+          
+      </div>
+      <hr>
+
+      <div class="blogs_info">
+          <div class="header">
+               <h5>blog Title</h5>
+               <h5>created At</h5>
+               <h5>Actions</h5>
+
+          </div>
+          <div class="data">
+
+            {{#each yourblogs}}
+
+            <div class="dat_info">
+            <p class="title">{{this.blog_title}}</p>
+            <p class="created">{{this.CreatedAt}}</p>
+            <p class="actions">
+                <a href="/edit/{{this._id}}"><i class="fas fa-edit"></i></a><a href="#" class="deletepost" data-id="{{this._id}}" style="color: red;">
+                  <i class="fas fa-trash"></i>
+                </a>
+            </p> 
+            </div>
+
+            {{/each}}
+              
+          </div>
+      </div>
+    
+</div>
+
+  </div>
+</div>
+
+<script>
+    const date = document.querySelector(".date")
+    const month = document.querySelector(".month")
+    const year = document.querySelector(".year");
+      
+const currentDate = new Date();
+const currentDay = currentDate.getDate();
+     const currentMonth = currentDate.getMonth();
+     const currentYear = currentDate.getFullYear();
+const months = [
+    "January", "February", "March", "April",
+    "May", "June", "July", "August",
+    "September", "October", "November", "December"
+];
+
+
+     date.innerHTML = currentDay
+     month.innerHTML = months[currentMonth];
+     year.innerHTML = currentYear;
+     const deleteLinks = document.querySelectorAll(".deletepost");
+
+deleteLinks.forEach(link => {
+    link.addEventListener("click", async function(event) {
+        event.preventDefault();
+
+        const postId = link.getAttribute("data-id");
+
+        const response = await fetch("/deletepost", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({ postId })
+        });
+
+        if (response.ok) {
+            link.closest(".dat_info").remove();
+        }
+    });
+});
+
+</script>
+
+{{>Footer5}}
